@@ -1,1 +1,28 @@
+import java.util.*;
+public class hackerrank {
 
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n = sc.nextInt();
+        double temp= sc.nextDouble();
+        if(n>0 && n<3){
+            switch(n){
+                case 1: float cel = (float)(((temp-32)*5)/9);
+                        if((cel*100)%1==0)
+                            System.out.println(cel);
+                        else
+                            System.out.format("%.2f",cel);
+                        break;
+                case 2: float fah = (float)(((temp*9)/5)+32);
+                        if((fah*100)%1==0)
+                            System.out.println(fah);
+                        else 
+                            System.out.format("%.2f",fah);                        
+            }   
+        }
+        else{
+            System.out.println("INVALID CHOICE");;
+        }
+        sc.close();
+    }
+}
